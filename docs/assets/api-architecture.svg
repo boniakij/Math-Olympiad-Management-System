@@ -1,0 +1,85 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="110" y1="60" x2="1090" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF9F3"/>
+      <stop offset="1" stop-color="#FFF0DF"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF9F2"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="760" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#7B4218" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10V0Z" fill="#C86C29"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+  <rect x="42" y="42" width="1116" height="676" rx="26" stroke="#F1D1B6" stroke-width="2"/>
+
+  <text x="86" y="108" fill="#7E4215" font-family="Verdana, Geneva, sans-serif" font-size="40" font-weight="700">Backend API Container</text>
+  <text x="86" y="146" fill="#A06A3F" font-family="Verdana, Geneva, sans-serif" font-size="22">Laravel REST API with authentication, business rules, documents, and exports</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="190" width="240" height="140" rx="24" fill="#C86C29"/>
+    <text x="130" y="248" fill="#FFF7F1" font-family="Verdana, Geneva, sans-serif" font-size="28" font-weight="700">Clients</text>
+    <text x="130" y="286" fill="#FFE8D6" font-family="Verdana, Geneva, sans-serif" font-size="20">React SPA</text>
+    <text x="130" y="314" fill="#FFE8D6" font-family="Verdana, Geneva, sans-serif" font-size="20">Admin and Student UI</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="420" y="190" width="320" height="140" rx="24" fill="url(#card)"/>
+    <rect x="420" y="190" width="320" height="140" rx="24" stroke="#F3DCC8" stroke-width="2"/>
+    <text x="452" y="240" fill="#7E4215" font-family="Verdana, Geneva, sans-serif" font-size="26" font-weight="700">HTTP Layer</text>
+    <text x="452" y="280" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Routes</text>
+    <text x="452" y="312" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Controllers • Form Requests • Resources</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="830" y="190" width="280" height="140" rx="24" fill="url(#card)"/>
+    <rect x="830" y="190" width="280" height="140" rx="24" stroke="#F3DCC8" stroke-width="2"/>
+    <text x="862" y="240" fill="#7E4215" font-family="Verdana, Geneva, sans-serif" font-size="26" font-weight="700">Security</text>
+    <text x="862" y="280" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Sanctum Auth</text>
+    <text x="862" y="312" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Role Middleware and Policies</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="120" y="410" width="250" height="240" rx="24" fill="url(#card)"/>
+    <rect x="120" y="410" width="250" height="240" rx="24" stroke="#F3DCC8" stroke-width="2"/>
+    <text x="152" y="460" fill="#7E4215" font-family="Verdana, Geneva, sans-serif" font-size="26" font-weight="700">Core Modules</text>
+    <text x="152" y="504" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Auth</text>
+    <text x="152" y="536" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Student Registration</text>
+    <text x="152" y="568" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Approval Workflow</text>
+    <text x="152" y="600" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Dashboard</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="420" y="410" width="300" height="240" rx="24" fill="url(#card)"/>
+    <rect x="420" y="410" width="300" height="240" rx="24" stroke="#F3DCC8" stroke-width="2"/>
+    <text x="452" y="460" fill="#7E4215" font-family="Verdana, Geneva, sans-serif" font-size="26" font-weight="700">Operational Modules</text>
+    <text x="452" y="504" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Exam Management</text>
+    <text x="452" y="536" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Center Assignment</text>
+    <text x="452" y="568" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Seat Allocation</text>
+    <text x="452" y="600" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Notifications</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="780" y="410" width="300" height="240" rx="24" fill="url(#card)"/>
+    <rect x="780" y="410" width="300" height="240" rx="24" stroke="#F3DCC8" stroke-width="2"/>
+    <text x="812" y="460" fill="#7E4215" font-family="Verdana, Geneva, sans-serif" font-size="26" font-weight="700">Output Services</text>
+    <text x="812" y="504" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">PDF Generation</text>
+    <text x="812" y="536" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Verification Endpoints</text>
+    <text x="812" y="568" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Excel Exports</text>
+    <text x="812" y="600" fill="#915C35" font-family="Verdana, Geneva, sans-serif" font-size="22">Queue-backed Tasks</text>
+  </g>
+
+  <path d="M330 260H410" stroke="#C86C29" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M740 260H820" stroke="#C86C29" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M580 340V398" stroke="#C86C29" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M365 530H410" stroke="#C86C29" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M720 530H770" stroke="#C86C29" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <text x="80" y="706" fill="#A47348" font-family="Verdana, Geneva, sans-serif" font-size="18">API image 2 of 3 • request handling, security, business modules, and document outputs</text>
+</svg>

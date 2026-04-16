@@ -33,6 +33,20 @@ Notes:
 - File storage is handled inside backend-attached storage paths for V1, not as a separate service
 - Queue processing for V1 may run inside the backend container or as a backend-managed process, not as a fourth mandatory image
 
+## Architecture Images
+
+### Frontend Image
+
+![Frontend architecture image](./assets/frontend-architecture.svg)
+
+### API Image
+
+![API architecture image](./assets/api-architecture.svg)
+
+### Database Image
+
+![Database architecture image](./assets/database-architecture.svg)
+
 ## Logical Architecture
 
 ### Frontend

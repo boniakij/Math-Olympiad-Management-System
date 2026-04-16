@@ -1,0 +1,85 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="50" x2="1070" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4FFF8"/>
+      <stop offset="1" stop-color="#E6F7EE"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F6FFF9"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="760" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#1E6C49" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10V0Z" fill="#2D8A5F"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+  <rect x="42" y="42" width="1116" height="676" rx="26" stroke="#CAE8D8" stroke-width="2"/>
+
+  <text x="86" y="108" fill="#1E6948" font-family="Verdana, Geneva, sans-serif" font-size="40" font-weight="700">Database Container</text>
+  <text x="86" y="146" fill="#4D8669" font-family="Verdana, Geneva, sans-serif" font-size="22">MySQL relational storage for auth, student profiles, exams, centers, and reporting</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="200" width="220" height="150" rx="24" fill="#2D8A5F"/>
+    <text x="128" y="255" fill="#F4FFF8" font-family="Verdana, Geneva, sans-serif" font-size="26" font-weight="700">Identity</text>
+    <text x="128" y="295" fill="#DBF5E8" font-family="Verdana, Geneva, sans-serif" font-size="22">users</text>
+    <text x="128" y="327" fill="#DBF5E8" font-family="Verdana, Geneva, sans-serif" font-size="22">roles and login state</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="380" y="170" width="300" height="210" rx="24" fill="url(#card)"/>
+    <rect x="380" y="170" width="300" height="210" rx="24" stroke="#D5EEDF" stroke-width="2"/>
+    <text x="412" y="220" fill="#1E6948" font-family="Verdana, Geneva, sans-serif" font-size="26" font-weight="700">Student Domain</text>
+    <text x="412" y="264" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">students</text>
+    <text x="412" y="296" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">approval state</text>
+    <text x="412" y="328" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">photo and location refs</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="760" y="170" width="320" height="210" rx="24" fill="url(#card)"/>
+    <rect x="760" y="170" width="320" height="210" rx="24" stroke="#D5EEDF" stroke-width="2"/>
+    <text x="792" y="220" fill="#1E6948" font-family="Verdana, Geneva, sans-serif" font-size="26" font-weight="700">Location Masters</text>
+    <text x="792" y="264" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">divisions</text>
+    <text x="792" y="296" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">districts</text>
+    <text x="792" y="328" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">upazilas</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="160" y="460" width="280" height="200" rx="24" fill="url(#card)"/>
+    <rect x="160" y="460" width="280" height="200" rx="24" stroke="#D5EEDF" stroke-width="2"/>
+    <text x="192" y="510" fill="#1E6948" font-family="Verdana, Geneva, sans-serif" font-size="26" font-weight="700">Exam Data</text>
+    <text x="192" y="554" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">exams</text>
+    <text x="192" y="586" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">status and schedule</text>
+    <text x="192" y="618" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">publication lifecycle</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="500" y="440" width="300" height="220" rx="24" fill="#E9FFF2"/>
+    <rect x="500" y="440" width="300" height="220" rx="24" stroke="#9ED2B7" stroke-width="3"/>
+    <text x="532" y="492" fill="#1E6948" font-family="Verdana, Geneva, sans-serif" font-size="26" font-weight="700">Registration Hub</text>
+    <text x="532" y="538" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">exam_registrations</text>
+    <text x="532" y="570" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">student_id • exam_id • center_id</text>
+    <text x="532" y="602" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">seat numbers and documents</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="860" y="460" width="220" height="200" rx="24" fill="url(#card)"/>
+    <rect x="860" y="460" width="220" height="200" rx="24" stroke="#D5EEDF" stroke-width="2"/>
+    <text x="892" y="510" fill="#1E6948" font-family="Verdana, Geneva, sans-serif" font-size="26" font-weight="700">Centers</text>
+    <text x="892" y="554" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">centers</text>
+    <text x="892" y="586" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">capacity and status</text>
+    <text x="892" y="618" fill="#44795E" font-family="Verdana, Geneva, sans-serif" font-size="22">location references</text>
+  </g>
+
+  <path d="M310 274H370" stroke="#2D8A5F" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M680 274H750" stroke="#2D8A5F" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M530 390V430" stroke="#2D8A5F" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M440 560H490" stroke="#2D8A5F" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M800 550H850" stroke="#2D8A5F" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M920 390C920 420 900 420 820 470" stroke="#2D8A5F" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <text x="80" y="706" fill="#5B8D72" font-family="Verdana, Geneva, sans-serif" font-size="18">Database image 3 of 3 • relational structure centered on students, exams, registrations, and locations</text>
+</svg>

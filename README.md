@@ -45,6 +45,10 @@ Optional for non-Docker local work:
 
 ## Environment Files
 
+Root Docker environment:
+
+- [.env.example](.env.example)
+
 Backend example:
 
 - [backend/.env.example](backend/.env.example)
@@ -53,7 +57,14 @@ Frontend example:
 
 - [frontend/.env.example](frontend/.env.example)
 
-For Docker-based local development, the compose file already provides the required core runtime variables.
+For Docker-based local development:
+
+```bash
+cp .env.example .env
+```
+
+The compose file reads `.env` automatically, and the frontend container writes `public/runtime-config.js` on startup so the API base URL can be changed without rebuilding the image.
+If you change `BACKEND_PORT`, also update `APP_URL`, `FRONTEND_URL`, and `VITE_API_BASE_URL` in `.env`.
 
 ## Services
 
@@ -72,7 +83,8 @@ For Docker-based local development, the compose file already provides the requir
 ### Database
 
 - Service name: `mysql`
-- Port: `3306`
+- Host port: `3307` by default to avoid conflicts with another local MySQL instance
+- Container port: `3306`
 - Database: `math_olympiad`
 
 ## Quick Start
@@ -80,6 +92,7 @@ For Docker-based local development, the compose file already provides the requir
 Build and start the full stack:
 
 ```bash
+cp .env.example .env
 docker compose up --build -d
 ```
 
@@ -133,12 +146,19 @@ Run backend tests:
 docker compose exec backend php artisan test
 ```
 
+Run frontend lint:
+
+```bash
+docker compose exec frontend npm run lint
+```
+
 ## Docker Notes
 
 - The backend container installs Composer dependencies on first startup if needed.
 - The frontend container installs npm dependencies on first startup if needed.
 - MySQL data is stored in a named Docker volume.
 - Laravel storage is persisted in a named Docker volume.
+- Jenkins and local Docker builds both use the repository root as the build context.
 
 ## Jenkins Integration
 
