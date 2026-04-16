@@ -1,13 +1,22 @@
 import React from 'react';
+import '../styles/CTA.css';
 
 const CTA = () => {
   return (
     <section className="cta-section">
-      <div className="container">
+      <div className="cta-background">
+        <div className="cta-gradient"></div>
+      </div>
+
+      <div className="cta-content">
         <h2 className="cta-title">Ready to Start Your Journey?</h2>
-        <div className="cta-actions">
-          <button className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>Register Now</button>
-          <button className="btn btn-outline" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>Login</button>
+        <p className="cta-subtitle">
+          Join thousands of students challenging themselves and achieving excellence
+        </p>
+
+        <div className="cta-buttons">
+          <button className="btn-primary-large">Register Now</button>
+          <button className="btn-secondary-large">Login to Dashboard</button>
         </div>
       </div>
     </section>

@@ -1,40 +1,46 @@
 import React from 'react';
+import '../styles/KeyInfo.css';
 
 const KeyInfo = () => {
-  const cards = [
+  const infoCards = [
     {
-      icon: '🏛️',
+      id: 1,
+      icon: '❓',
       title: 'What is the Olympiad?',
-      desc: 'An annual competition consisting of rigorous mathematical challenges designed to test logical thinking.'
+      description: 'A prestigious mathematical competition that tests creativity, logic, and problem-solving skills beyond the standard curriculum.'
     },
     {
-      icon: '🎓',
-      title: 'Who can participate?',
-      desc: 'Students from middle school to high school all across the globe are welcome to join our contests.'
+      id: 2,
+      icon: '👥',
+      title: 'Who Can Participate?',
+      description: 'Students from grade 6 to 12 from all educational backgrounds are welcome to challenge themselves.'
     },
     {
+      id: 3,
       icon: '⚙️',
-      title: 'How it works',
-      desc: 'Register online, access preparatory resources, and participate in regional, national, and global phases.'
+      title: 'How It Works',
+      description: 'Complete online assessments, receive scores, qualify for advanced rounds, and compete in regional and national championships.'
     },
     {
+      id: 4,
       icon: '📅',
-      title: 'Important dates',
-      desc: 'Registration opens in May. The primary qualification round takes place in August.'
+      title: 'Important Dates',
+      description: 'Registration opens January 1st. Preliminary round: February. Qualifiers announced: March. National round: April.'
     }
   ];
 
   return (
-    <section className="section key-info-section">
-      <div className="container">
-        <h2 className="section-title">Everything You Need to Know</h2>
-        
+    <section className="key-info">
+      <div className="section-container">
+        <h2 className="section-title">Key Information</h2>
+        <p className="section-subtitle">Everything you need to know about the Ariba Math Olympiad</p>
+
         <div className="info-grid">
-          {cards.map((card, idx) => (
-            <div className="info-card" key={idx}>
-              <div className="info-icon">{card.icon}</div>
-              <h3 className="info-title">{card.title}</h3>
-              <p className="info-desc">{card.desc}</p>
+          {infoCards.map((card) => (
+            <div key={card.id} className="info-card">
+              <div className="card-icon">{card.icon}</div>
+              <h3 className="card-title">{card.title}</h3>
+              <p className="card-description">{card.description}</p>
             </div>
           ))}
         </div>

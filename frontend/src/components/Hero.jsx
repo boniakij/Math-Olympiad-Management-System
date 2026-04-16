@@ -1,18 +1,32 @@
 import React from 'react';
+import '../styles/Hero.css';
 
 const Hero = () => {
   return (
-    <section id="home" className="hero-section">
-      <img src="/logo.png" alt="Logo watermark" className="hero-logo-bg" />
-      <div className="container">
-        <div className="hero-content">
-          <h1 className="hero-title">Empowering Future Champions Through Olympiads</h1>
-          <p className="hero-subtitle">
-            Join the most prestigious mathematical competition and showcase your brilliance on a global stage.
+    <section className="hero" id="home">
+      <div className="hero-background">
+        <div className="gradient-1"></div>
+        <div className="gradient-2"></div>
+      </div>
+
+      <div className="hero-content">
+        <div className="hero-text">
+          <h1 className="hero-title">
+            Empowering Future Champions Through Olympiads
+          </h1>
+          <p className="hero-tagline">
+            Discover your potential, compete with the best, and achieve extraordinary success in mathematical excellence
           </p>
-          <div className="hero-actions">
-            <button className="btn btn-accent">Join Now</button>
-            <button className="btn btn-outline" style={{ color: '#fff', borderColor: '#fff' }}>Explore Contests</button>
+
+          <div className="hero-buttons">
+            <button className="btn-primary">Join Now</button>
+            <button className="btn-secondary">Explore Contests</button>
+          </div>
+        </div>
+
+        <div className="hero-illustration">
+          <div className="illustration-placeholder">
+            🏆
           </div>
         </div>
       </div>
