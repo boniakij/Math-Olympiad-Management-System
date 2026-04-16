@@ -40,6 +40,9 @@ This folder contains the working documentation for the Math Olympiad Management 
 12. [12-project-task-list.md](./12-project-task-list.md)
    Purpose: execution-ready task list covering backend API, frontend, DevOps, security, QA, and release work.
 
+13. [13-default-credentials.md](./13-default-credentials.md)
+   Purpose: default seeded admin and student login credentials for local development.
+
 ## Recommended Scope For V1
 
 - Student registration and login
