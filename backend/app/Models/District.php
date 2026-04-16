@@ -26,4 +26,9 @@ class District extends Model
     {
         return $this->hasMany(Upazila::class);
     }
+
+    public function centers(): HasMany
+    {
+        return $this->hasMany(Center::class);
+    }
 }

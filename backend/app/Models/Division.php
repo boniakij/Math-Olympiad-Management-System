@@ -19,4 +19,9 @@ class Division extends Model
     {
         return $this->hasMany(District::class);
     }
+
+    public function centers(): HasMany
+    {
+        return $this->hasMany(Center::class);
+    }
 }

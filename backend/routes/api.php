@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\AdminDashboardController;
 use App\Http\Controllers\Api\AdminStudentController;
 use App\Http\Controllers\Api\LocationController;
+use App\Http\Controllers\Api\CenterController;
 use App\Http\Controllers\Api\StudentProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,6 +44,14 @@ Route::prefix('v1')->group(function (): void {
 
         Route::prefix('admin')->middleware('role:admin,super_admin')->group(function (): void {
             Route::get('/dashboard/summary', [AdminDashboardController::class, 'summary']);
+
+            Route::prefix('centers')->group(function (): void {
+                Route::get('/', [CenterController::class, 'index']);
+                Route::post('/', [CenterController::class, 'store']);
+                Route::get('/{center}', [CenterController::class, 'show']);
+                Route::put('/{center}', [CenterController::class, 'update']);
+                Route::delete('/{center}', [CenterController::class, 'destroy']);
+            });
 
             Route::prefix('students')->group(function (): void {
                 Route::get('/', [AdminStudentController::class, 'index']);
