@@ -37,6 +37,9 @@ This folder contains the working documentation for the Math Olympiad Management 
 11. [11-use-case-specification.md](./11-use-case-specification.md)
     Purpose: formal use case catalog with actors, triggers, preconditions, flows, and exceptions.
 
+12. [12-project-task-list.md](./12-project-task-list.md)
+   Purpose: execution-ready task list covering backend API, frontend, DevOps, security, QA, and release work.
+
 ## Recommended Scope For V1
 
 - Student registration and login
@@ -69,6 +72,8 @@ This folder contains the working documentation for the Math Olympiad Management 
 - Exports: Laravel Excel for report generation
 - QR: Simple QR code generation for verification links
 - Runtime: Docker Compose for local development
+- Runtime stack: 3 app services or images only - frontend, backend API, and MySQL
+- CI/CD: Jenkins-driven pipeline for build, test, image delivery, deployment, and verification
 
 ## Design Principles
 

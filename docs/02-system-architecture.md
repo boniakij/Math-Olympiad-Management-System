@@ -19,6 +19,20 @@ Reason:
 4. File storage for uploaded photos and generated PDFs
 5. Queue worker for document generation and notifications
 
+## Runtime Topology
+
+The runtime application stack for V1 should be limited to 3 deployable images or services:
+
+1. `frontend`: React application container
+2. `backend`: Laravel API container
+3. `mysql`: MySQL database container
+
+Notes:
+
+- Jenkins is external to the application runtime and is responsible for CI/CD automation
+- File storage is handled inside backend-attached storage paths for V1, not as a separate service
+- Queue processing for V1 may run inside the backend container or as a backend-managed process, not as a fourth mandatory image
+
 ## Logical Architecture
 
 ### Frontend
@@ -55,6 +69,41 @@ Reason:
 4. Business service executes database changes
 5. API returns standard JSON response
 6. Frontend updates UI state
+
+## Container Communication Flow
+
+1. User accesses the frontend container
+2. Frontend sends API requests to the backend container
+3. Backend reads and writes data in the MySQL container
+4. Backend generates PDFs and serves document endpoints
+
+## CI/CD Architecture
+
+Jenkins manages the full CI/CD lifecycle for the 3-image application stack.
+
+### Jenkins Responsibilities
+
+- Pull code from GitHub
+- Run backend validation and tests
+- Run frontend validation and build checks
+- Build Docker images for frontend and backend
+- Reference the MySQL image version used in environment definitions
+- Push application images to the container registry
+- Deploy updated containers to the target server or environment
+- Run post-deployment verification
+
+### CI/CD Phases
+
+1. Source checkout
+2. Dependency installation
+3. Backend code quality and automated tests
+4. Frontend lint and build validation
+5. Docker image build for frontend and backend
+6. Registry push for application images
+7. Deployment to target environment
+8. Database migration execution
+9. Smoke test and health verification
+10. Release confirmation or rollback
 
 ## Recommended Laravel Structure
 

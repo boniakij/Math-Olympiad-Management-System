@@ -10,10 +10,15 @@
 
 ## Recommended Services
 
+- `frontend`: React frontend container
 - `backend`: Laravel API container
-- `frontend`: React dev server container
 - `mysql`: MySQL database container
-- `nginx`: optional reverse proxy for unified local routing
+
+The default stack should remain exactly 3 runtime services or images.
+
+- No extra reverse proxy is required for the base setup
+- No extra cache service is required for the base setup
+- No separate queue container is required for the base setup
 
 ## Example Local Ports
 
@@ -76,15 +81,49 @@ Prepare for Jenkins and GitHub with these conventions:
 - Environment-specific `.env` management outside version control
 - Automated backend tests and frontend build checks
 - Docker image tagging by branch or release version
+- Jenkins as the primary CI/CD orchestrator
+- Three-image deployment model: frontend, backend, and mysql
 
-## Suggested Pipeline Stages
+## Jenkins Pipeline Model
+
+Jenkins should orchestrate the project as a full CI/CD pipeline for the 3-image stack.
+
+### Build Targets
+
+- Frontend image
+- Backend image
+- Deployment definition referencing MySQL service
+
+### Suggested Pipeline Stages
 
 1. Install dependencies
 2. Run backend code style and tests
 3. Run frontend lint and build
-4. Build Docker images
-5. Push images to registry
-6. Deploy to target environment
+4. Build frontend Docker image
+5. Build backend Docker image
+6. Tag images by branch, commit, or release
+7. Push images to registry
+8. Deploy updated frontend, backend, and mysql stack definitions
+9. Run database migrations
+10. Run smoke tests and health checks
+11. Approve release completion or trigger rollback
+
+## Jenkins Deliverables
+
+- `Jenkinsfile` in the repository root
+- Backend test stage
+- Frontend validation stage
+- Docker build and tagging stage
+- Registry push stage
+- Deployment stage
+- Post-deployment verification stage
+
+## Deployment Notes
+
+- MySQL may use the official database image rather than a custom-built image
+- Frontend and backend should be built as project-owned images
+- Local development uses Docker Compose to run the 3-service stack
+- Production deployment can reuse the same service split with environment-specific values
 
 ## Security Considerations
 

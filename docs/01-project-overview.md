@@ -90,6 +90,16 @@ Manual registration and offline exam planning create inconsistency, duplicate re
 - Clear audit fields on major records
 - Scalable data design for future levels and large registration volumes
 
+## Deployment Model
+
+- Runtime stack uses 3 core containers or images only:
+	- Frontend application
+	- Backend API application
+	- MySQL database
+- Jenkins is used for CI/CD orchestration, not as part of the runtime app stack
+- Docker Compose is used for local development orchestration
+- The deployment model should stay simple for V1 and avoid unnecessary extra services in the base setup
+
 ## Recommended Folder Ownership
 
 - `backend/`: Laravel API and business logic
